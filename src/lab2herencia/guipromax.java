@@ -80,7 +80,7 @@ public class guipromax {
           @Override 
           public void actionPerformed(ActionEvent e){
               pantalla.dispose();
-              ventanaBuscarEmp ventana = new ventanaBuscarEmp(list);
+              BuscarEmpGUI ventana = new BuscarEmpGUI(list);
           }
                     
         });
@@ -96,7 +96,7 @@ public class guipromax {
         pantalla.setVisible(true);
     }
     
-<<<<<<< HEAD
+
     }
  ////////yo trabaje lo de arribaa 
     
@@ -107,7 +107,7 @@ class FechaGUI{
     
     public FechaGUI(ClaseBaseEmpleado empleado, ArrayList<ClaseBaseEmpleado> lista){
         
-                this.lista=lista;
+        this.lista=lista;
         this.empleado= empleado;
         JFrame screen = new JFrame();
         screen.setSize(800, 600);  //Tamaño standard para menus
@@ -173,7 +173,7 @@ class FechaGUI{
           @Override 
           public void actionPerformed(ActionEvent e){
               screen.dispose();
-              ventanaBuscarEmp ventana = new ventanaBuscarEmp(lista);
+              BuscarEmpGUI ventana = new BuscarEmpGUI(lista);
           }
                     
         });
@@ -192,13 +192,9 @@ class FechaGUI{
     }
     
     
-}
     
     
-    
-=======
- }
->>>>>>> 574593eaadbedd5682247f306a77ab65660f8272
+
 
  class ventasGUI {
     
@@ -229,7 +225,7 @@ class FechaGUI{
         actualHrstxt.setBounds(150, 200, 200, 25);
         actualHrstxt.setEnabled(false);
         if(empleado!=null){
-            actualHrstxt.setText(String.valueOf(empleado.horasTrabajadas));
+            actualHrstxt.setText(String.valueOf(empleado.HorasTrabajadas));
         }
         
         
@@ -251,7 +247,7 @@ class FechaGUI{
           public void actionPerformed(ActionEvent e){
               int horas = Integer.valueOf(newHourstxt.getText());
               if(horas!=0 && horas>0){
-                empleado.registrarHoras(horas);
+                empleado.registrarhoras(horas);
                 JOptionPane.showMessageDialog(screen, "Horas Agregadas Exitosamente");  
               }else{
                   JOptionPane.showMessageDialog(screen, "AVISO: Porfavor introducir valores validos");
@@ -269,7 +265,7 @@ class FechaGUI{
           @Override 
           public void actionPerformed(ActionEvent e){
               screen.dispose();
-              ventanaBuscarEmp ventana = new ventanaBuscarEmp(lista);
+              BuscarEmpGUI ventana = new BuscarEmpGUI(lista);
           }
                     
         });
@@ -287,9 +283,5 @@ class FechaGUI{
     }
     
     
-    public static void main(String[] args) {
-        subVentHorasTrabajadas ventana = new subVentHorasTrabajadas(empleado, lista);
-    }
-    
-    
 }
+
