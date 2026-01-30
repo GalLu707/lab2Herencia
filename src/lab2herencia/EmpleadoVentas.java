@@ -9,5 +9,6 @@ package lab2herencia;
  * @author USER
  */
 public class EmpleadoVentas {
-    
+
+private double[]    
 }
