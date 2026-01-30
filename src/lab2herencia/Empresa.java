@@ -53,7 +53,7 @@ public class Empresa extends JFrame {
         btnReporte.setBounds(200, 380, 250, 55);
         btnReporte.addActionListener(e -> {
             this.dispose();
-            new ventanaGenReporte(listaEmpleados);
+            new GenerarReporGUI(listaEmpleados);
         });
 
         JButton btnCerrar = new JButton("Salir del Sistema");

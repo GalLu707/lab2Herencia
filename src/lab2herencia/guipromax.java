@@ -83,11 +83,9 @@ public class guipromax {
           @Override 
           public void actionPerformed(ActionEvent e){
               pantalla.dispose();
-<<<<<<< HEAD
               BuscarEmpGUI ventana = new BuscarEmpGUI(list);
-=======
-               ventana = new ventanaBuscarEmp(list);
->>>>>>> d39b7da2331cdb7da11549d1d9d4e07dbecfcfbf
+               ventana = new BuscarEmpGUI(list);
+
           }
                     
         });
@@ -286,12 +284,12 @@ class ventasGUI {
     
 }
 
-class GenerarRepor extends JFrame {
+class GenerarReporGUI extends JFrame {
 
     private final JTextArea txtReporte;
     private final ArrayList<ClaseBaseEmpleado> dataEmpleados;
 
-    public GenerarRepor(ArrayList<ClaseBaseEmpleado> lista) {
+    public GenerarReporGUI(ArrayList<ClaseBaseEmpleado> lista) {
         // inizializar las variables
         this.dataEmpleados = (lista != null) ? lista : new ArrayList<>();
         
@@ -354,14 +352,7 @@ class GenerarRepor extends JFrame {
         txtReporte.setText(constructorTexto.toString());
     }
 }
-<<<<<<< HEAD
-}
 
-
-
-
-
-=======
 
 
    class subVentHorasTrabajadas {
@@ -433,7 +424,7 @@ class GenerarRepor extends JFrame {
           @Override 
           public void actionPerformed(ActionEvent e){
               screen.dispose();
-              ventanaBuscarEmp ventana = new ventanaBuscarEmp(lista);
+              BuscarEmpGUI ventana = new BuscarEmpGUI(lista);
           }
                     
         });
@@ -450,9 +441,3 @@ class GenerarRepor extends JFrame {
         screen.setVisible(true);
     }
     
-    
-    public static void main(String[] args) {
-        subVentHorasTrabajadas ventana = new subVentHorasTrabajadas(empleado, lista);
-    }
-    
->>>>>>> d39b7da2331cdb7da11549d1d9d4e07dbecfcfbf
