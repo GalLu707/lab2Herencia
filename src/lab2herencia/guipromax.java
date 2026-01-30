@@ -78,7 +78,7 @@ public class guipromax {
           @Override 
           public void actionPerformed(ActionEvent e){
               pantalla.dispose();
-              ventanaBuscarEmp ventana = new ventanaBuscarEmp(list);
+               ventana = new ventanaBuscarEmp(list);
           }
                     
         });
