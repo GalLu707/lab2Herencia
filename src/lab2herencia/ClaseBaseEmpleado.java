@@ -20,15 +20,27 @@ public class ClaseBaseEmpleado {
         this.codigo= codigo;
         this.nombre = nombre;
         fechaContratacion= Calendar.getInstance();
-        
-        
-        
+        salarioBase = 8500;
+        HorasTrabajadas =0;
+
         
     }
     
+    public void registrarhoras(int horas){
+        HorasTrabajadas = horas;
+    }
     
-    
-    
+    public double calcularPago(){
+        if(HorasTrabajadas < 160){
+            return((salarioBase*HorasTrabajadas)-(salarioBase* 0.035));
+        }
+        return((salarioBase*160)-(salarioBase*0.035));
+    }
+
+    @Override
+    public String toString() {
+        return"codigo= " + codigo + "\n nombre= " + nombre + "\n fechaContratacion= " + fechaContratacion + '}';
+    }
     
     
 }
