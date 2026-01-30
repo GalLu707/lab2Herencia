@@ -14,8 +14,10 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
 import javax.swing.JTextArea;
 import javax.swing.JTextField;
+import javax.swing.SwingConstants;
 
 public class guipromax {
     // gui todavia no funcional
@@ -97,11 +99,7 @@ public class guipromax {
         pantalla.setVisible(true);
     }
     
-<<<<<<< HEAD
 
-=======
->>>>>>> 50c7419f86ae08d6fcaa7742fcb5f1a797adb23d
-    }
  ////////yo trabaje lo de arribaa 
     
 
@@ -193,18 +191,7 @@ class FechaGUI{
         screen.add(titulo);
         screen.setVisible(true);
     }
-<<<<<<< HEAD
-    }
-    
-    
-    
-    
 
-=======
-}
-    
-    
->>>>>>> 50c7419f86ae08d6fcaa7742fcb5f1a797adb23d
 
 class ventasGUI {
     
@@ -293,15 +280,6 @@ class ventasGUI {
     }
     
     
-<<<<<<< HEAD
-}
-
-=======
-    public static void main(String[] args) {
-        subVentHorasTrabajadas ventana = new subVentHorasTrabajadas(empleado, lista);
-    }
-    
-    
 }
 
 class GenerarRepor extends JFrame {
@@ -372,4 +350,9 @@ class GenerarRepor extends JFrame {
         txtReporte.setText(constructorTexto.toString());
     }
 }
->>>>>>> 50c7419f86ae08d6fcaa7742fcb5f1a797adb23d
+}
+
+
+
+
+
