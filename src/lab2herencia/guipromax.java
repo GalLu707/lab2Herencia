@@ -14,6 +14,7 @@ import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JLabel;
 import javax.swing.JOptionPane;
+import javax.swing.JTextArea;
 import javax.swing.JTextField;
 
 public class guipromax {
@@ -96,7 +97,10 @@ public class guipromax {
         pantalla.setVisible(true);
     }
     
+<<<<<<< HEAD
 
+=======
+>>>>>>> 50c7419f86ae08d6fcaa7742fcb5f1a797adb23d
     }
  ////////yo trabaje lo de arribaa 
     
@@ -189,14 +193,20 @@ class FechaGUI{
         screen.add(titulo);
         screen.setVisible(true);
     }
+<<<<<<< HEAD
     }
     
     
     
     
 
+=======
+}
+    
+    
+>>>>>>> 50c7419f86ae08d6fcaa7742fcb5f1a797adb23d
 
- class ventasGUI {
+class ventasGUI {
     
     private static ClaseBaseEmpleado empleado;
     private static ArrayList<ClaseBaseEmpleado> lista;
@@ -283,5 +293,83 @@ class FechaGUI{
     }
     
     
+<<<<<<< HEAD
 }
 
+=======
+    public static void main(String[] args) {
+        subVentHorasTrabajadas ventana = new subVentHorasTrabajadas(empleado, lista);
+    }
+    
+    
+}
+
+class GenerarRepor extends JFrame {
+
+    private final JTextArea txtReporte;
+    private final ArrayList<ClaseBaseEmpleado> dataEmpleados;
+
+    public GenerarRepor(ArrayList<ClaseBaseEmpleado> lista) {
+        // inizializar las variables
+        this.dataEmpleados = (lista != null) ? lista : new ArrayList<>();
+        
+        // Configuracion de la ventana
+        this.setTitle("Visor de Reportes");
+        this.setSize(800, 600);
+        this.setLayout(null);
+        this.setResizable(false);
+        this.setLocationRelativeTo(null);
+        this.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
+
+        // --- Componentes Visuales ---
+        
+        // Etiqueta de encabezado
+        JLabel lblTitulo = new JLabel("Lista de Reportes Empleados", SwingConstants.CENTER);
+        lblTitulo.setFont(new Font("Monospaced", Font.BOLD, 28));
+        lblTitulo.setBounds(0, 20, 800, 50);
+        this.add(lblTitulo);
+
+        // area de texto
+        txtReporte = new JTextArea();
+        txtReporte.setEditable(false);
+        txtReporte.setFont(new Font("SansSerif", Font.PLAIN, 14));
+        
+        JScrollPane panelScroll = new JScrollPane(txtReporte);
+        panelScroll.setBounds(50, 80, 700, 350);
+        this.add(panelScroll);
+
+        // accion de botones
+        JButton btnCargar = new JButton("Generar Listado");
+        btnCargar.setBounds(300, 460, 200, 45);
+        btnCargar.setFocusable(false);
+        
+        // lamba para el evento
+        btnCargar.addActionListener(evt -> actualizarAreaReporte());
+        
+        this.add(btnCargar);
+        
+        // que se muestre la ventana
+        this.setVisible(true);
+    }
+
+    
+    private void actualizarAreaReporte() {
+        if (dataEmpleados.isEmpty()) {
+            txtReporte.setText(">>> ALERTA: No existen registros actualmente.");
+            return;
+        }
+
+        StringBuilder constructorTexto = new StringBuilder();
+        constructorTexto.append("====================================\n");
+        constructorTexto.append("      REPORTE DE EMPLEADOS   \n");
+        constructorTexto.append("====================================\n\n");
+
+        for (ClaseBaseEmpleado trabajador : dataEmpleados) {
+            constructorTexto.append(trabajador.toString()).append("\n");
+            constructorTexto.append("------------------------------------\n");
+        }
+
+        txtReporte.setText(constructorTexto.toString());
+    }
+}
+>>>>>>> 50c7419f86ae08d6fcaa7742fcb5f1a797adb23d
