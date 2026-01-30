@@ -4,11 +4,13 @@
  */
 package lab2herencia;
 import java.util.Calendar;
-        
+import java.util.ArrayList;
         
         
 public class ClaseBaseEmpleado {
-    
+  
+    public static ArrayList<ClaseBaseEmpleado> ListaE = new ArrayList<ClaseBaseEmpleado>();
+    Empresa ventana = new Empresa(ListaE);
     protected int codigo;
     protected String nombre;
     protected Calendar fechaContratacion;
@@ -41,6 +43,8 @@ public class ClaseBaseEmpleado {
     public String toString() {
         return"codigo= " + codigo + "\n nombre= " + nombre + "\n fechaContratacion= " + fechaContratacion + '}';
     }
+    // when haces tus momazos en comentarios
+    //ayudenme a no cometer un crimen de odio en contra de jocsan 
     
     
 }
