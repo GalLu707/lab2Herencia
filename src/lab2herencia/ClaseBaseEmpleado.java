@@ -9,8 +9,10 @@ import java.util.ArrayList;
         
 public class ClaseBaseEmpleado {
   
-    public static ArrayList<ClaseBaseEmpleado> ListaE = new ArrayList<ClaseBaseEmpleado>();
-    Empresa ventana = new Empresa(ListaE);
+    public static ArrayList<ClaseBaseEmpleado> ListaEmpleado = new ArrayList<ClaseBaseEmpleado>();
+    Empresa ventana = new Empresa(ListaEmpleado);
+    
+    
     protected int codigo;
     protected String nombre;
     protected Calendar fechaContratacion;

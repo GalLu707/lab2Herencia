@@ -4,6 +4,8 @@
  */
 package lab2herencia;
 
+import java.util.ArrayList;
+
 /**
  *
  * @author USER
@@ -12,7 +14,8 @@ public class Lab2Herencia {
 
     
     public static void main(String[] args) {
-        System.out.println("Hola");
+        ArrayList<ClaseBaseEmpleado> ListaEm = new ArrayList<ClaseBaseEmpleado>();
+       Empresa hola = new Empresa(ListaEm);
     }
     
 }
